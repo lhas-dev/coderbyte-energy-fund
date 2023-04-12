@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as Styled from './styles';
 import Eye from '../../assets/icons/eye.svg';
+import {useNavigation} from '@react-navigation/native';
 
 export const LoginScreen = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const navigation = useNavigation();
+
+  const handleSignUp = () => {
+    navigation.navigate('SignUp');
+  };
+
   return (
     <Styled.Wrapper>
       <Styled.Divider />
@@ -19,14 +27,24 @@ export const LoginScreen = () => {
         <Styled.Field>
           <Styled.FieldLabel>Password</Styled.FieldLabel>
           <Styled.FieldInput
-            secureTextEntry={true}
+            secureTextEntry={!showPassword}
             autoCapitalize="none"
             placeholder="Minimum 8 characters"
           />
-          <Styled.FieldIcon>
+          <Styled.FieldIcon onPress={() => setShowPassword(!showPassword)}>
             <Eye />
           </Styled.FieldIcon>
         </Styled.Field>
+        <Styled.Button>
+          <Styled.ButtonLabel>Login</Styled.ButtonLabel>
+        </Styled.Button>
+        <Styled.Helper onPress={handleSignUp}>
+          <Styled.HelperText>
+            Don't have an account?{' '}
+            <Styled.HelperTextUnderline>Sign up</Styled.HelperTextUnderline>{' '}
+            here
+          </Styled.HelperText>
+        </Styled.Helper>
       </Styled.Form>
     </Styled.Wrapper>
   );

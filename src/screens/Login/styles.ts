@@ -23,7 +23,11 @@ export const Field = styled.View`
   margin-top: 10px;
   margin-bottom: 10px;
 `;
-export const FieldLabel = styled.Text``;
+export const FieldLabel = styled.Text`
+  font-size: 11px;
+  line-height: 14px;
+  color: #a0a0a0;
+`;
 
 export const FieldInput = styled.TextInput`
   width: 100%;
@@ -31,11 +35,11 @@ export const FieldInput = styled.TextInput`
   padding: 15px 10px;
   margin-top: 5px;
   border-radius: 4px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 16px;
 `;
-export const FieldIcon = styled.View`
-  width: 20px;
-  height: 20px;
-  background: red;
+export const FieldIcon = styled.TouchableOpacity`
   position: absolute;
   right: 15px;
   bottom: 15px;
@@ -43,4 +47,33 @@ export const FieldIcon = styled.View`
 
 export const Form = styled.View`
   padding: 20px;
+`;
+
+export const Button = styled.TouchableOpacity`
+  margin-top: 25px;
+  width: 100%;
+  height: 58px;
+  background: #770fdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+`;
+
+export const ButtonLabel = styled.Text`
+  color: #fff;
+`;
+
+export const Helper = styled.TouchableOpacity`
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+`;
+export const HelperText = styled.Text`
+  text-align: center;
+  color: #a0a0a0;
+`;
+
+export const HelperTextUnderline = styled.Text`
+  text-decoration-line: underline;
 `;
