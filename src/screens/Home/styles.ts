@@ -30,4 +30,13 @@ export const HeaderText = styled.Text`
   font-size: 14px;
   line-height: 18px;
 `;
+
 export const AlertButton = styled.TouchableOpacity``;
+
+export const Divider = styled.View`
+  width: 100%;
+  height: 1px;
+  background: #f4f4f4;
+  margin-top: 32px;
+  margin-bottom: 20px;
+`;
