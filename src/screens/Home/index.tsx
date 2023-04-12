@@ -6,6 +6,7 @@ import CaretDown from '../../assets/icons/caret-down.svg';
 import {Portfolio} from '../../components/Portfolio';
 import {Funds} from '../../components/Funds';
 import {LearnMore} from '../../components/LearnMore';
+import {FAQ} from '../../components/FAQ';
 
 export const HomeScreen = () => {
   return (
@@ -26,6 +27,7 @@ export const HomeScreen = () => {
         <Styled.Divider />
         <Funds />
         <LearnMore />
+        <FAQ />
       </Styled.ScrollArea>
     </Styled.Wrapper>
   );
