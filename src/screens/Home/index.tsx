@@ -1,9 +1,9 @@
 import React from 'react';
-import {Text} from 'react-native';
 import * as Styled from './styles';
 import Person from '../../assets/icons/person.svg';
 import Alert from '../../assets/icons/alert.svg';
 import CaretDown from '../../assets/icons/caret-down.svg';
+import {Portfolio} from '../../components/Portfolio';
 
 export const HomeScreen = () => {
   return (
@@ -20,6 +20,7 @@ export const HomeScreen = () => {
             <Alert />
           </Styled.AlertButton>
         </Styled.Header>
+        <Portfolio />
       </Styled.ScrollArea>
     </Styled.Wrapper>
   );
