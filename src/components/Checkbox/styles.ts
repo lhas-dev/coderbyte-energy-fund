@@ -15,6 +15,14 @@ export const Square = styled.View`
   border-radius: 2px;
 `;
 
+export const SquareFilled = styled.View`
+  width: 20px;
+  height: 20px;
+  background: #e6e6e6;
+  border: 2px solid #e6e6e6;
+  border-radius: 2px;
+`;
+
 export const CheckboxLabel = styled.Text`
   font-size: 12px;
   line-height: 15px;

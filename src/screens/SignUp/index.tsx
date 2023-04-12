@@ -14,6 +14,7 @@ import {
 } from '../../components/Checkbox';
 
 export const SignUpScreen = () => {
+  const [termsOfUse, setTermsOfUse] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const navigation = useNavigation();
 
@@ -58,6 +59,8 @@ export const SignUpScreen = () => {
           </Field.Icon>
         </Field.Block>
         <Checkbox
+          checked={termsOfUse}
+          onChecked={() => setTermsOfUse(!termsOfUse)}
           label={
             <CheckboxLabel>
               I am over 18 years of age and I have read and agree to the{' '}
