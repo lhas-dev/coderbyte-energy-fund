@@ -2,15 +2,17 @@ import React, {useState} from 'react';
 import * as Styled from './styles';
 import * as Field from '../../components/Field';
 import Eye from '../../assets/icons/eye.svg';
-import {useNavigation} from '@react-navigation/native';
 import {PrimaryButton} from '../../components/PrimaryButton';
 import * as SecondaryButton from '../../components/SecondaryButton';
 import {Header} from '../../components/Header';
 import PageTitle from '../../components/PageTitle';
+import {RootStackParamList} from '../../App';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-export const LoginScreen = () => {
+type LoginScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+
+export const LoginScreen = ({navigation}: LoginScreenProps) => {
   const [showPassword, setShowPassword] = useState(false);
-  const navigation = useNavigation();
 
   const handleSignUp = () => {
     navigation.navigate('SignUp');

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import * as Styled from './styles';
 import * as Field from '../../components/Field';
 import Eye from '../../assets/icons/eye.svg';
-import {useNavigation} from '@react-navigation/native';
 import {PrimaryButton} from '../../components/PrimaryButton';
 import * as SecondaryButton from '../../components/SecondaryButton';
 import {Header} from '../../components/Header';
@@ -12,11 +11,14 @@ import {
   CheckboxLabel,
   CheckboxLabelHighlight,
 } from '../../components/Checkbox';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../App';
 
-export const SignUpScreen = () => {
+type SignUpScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
+
+export const SignUpScreen = ({navigation}: SignUpScreenProps) => {
   const [termsOfUse, setTermsOfUse] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const navigation = useNavigation();
 
   const handleLogin = () => {
     navigation.navigate('Login');
