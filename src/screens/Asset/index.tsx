@@ -15,7 +15,9 @@ export const AssetScreen = () => {
           </Styled.AssetDetails>
         </Header>
         <AssetValue />
+        <Styled.BiggestPrice>$19.02</Styled.BiggestPrice>
         <BigChart />
+        <Styled.LowestPrice>$17.66</Styled.LowestPrice>
       </Styled.ScrollArea>
     </Styled.Wrapper>
   );

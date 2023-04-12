@@ -29,3 +29,21 @@ export const AssetTicker = styled.Text`
   line-height: 17px;
   color: #808080;
 `;
+
+export const BiggestPrice = styled.Text`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #a0a0a0;
+  margin-left: 60%;
+  margin-bottom: 10px;
+`;
+export const LowestPrice = styled.Text`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #a0a0a0;
+  margin-left: 12%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
