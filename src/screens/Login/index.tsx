@@ -11,6 +11,10 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {useForm, Controller} from 'react-hook-form';
 
 type LoginScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+interface LoginFormData {
+  email: string;
+  password: string;
+}
 
 export const LoginScreen = ({navigation}: LoginScreenProps) => {
   const {
@@ -24,8 +28,7 @@ export const LoginScreen = ({navigation}: LoginScreenProps) => {
     },
   });
   const [showPassword, setShowPassword] = useState(false);
-
-  const onSubmit = data => {
+  const onSubmit = (data: LoginFormData) => {
     console.log('Login data', data);
     navigation.navigate('Home');
   };
