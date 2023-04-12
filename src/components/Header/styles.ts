@@ -5,6 +5,7 @@ export const Wrapper = styled.View`
   padding-top: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 `;
 export const Row = styled.View`
   display: flex;
