@@ -1,11 +1,15 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
+import {NavigationContainer} from '@react-navigation/native';
+
 function App(): JSX.Element {
   return (
-    <SafeAreaView>
-      <Text>ae</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView>
+        <Text>ae2</Text>
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
