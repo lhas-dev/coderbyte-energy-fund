@@ -2,6 +2,7 @@ import React from 'react';
 import {Header} from '../../components/Header';
 import * as Styled from './styles';
 import BigChart from '../../assets/icons/big-chart.svg';
+import {AssetValue} from '../../components/AssetValue';
 
 export const AssetScreen = () => {
   return (
@@ -13,6 +14,7 @@ export const AssetScreen = () => {
             <Styled.AssetTicker>WFND</Styled.AssetTicker>
           </Styled.AssetDetails>
         </Header>
+        <AssetValue />
         <BigChart />
       </Styled.ScrollArea>
     </Styled.Wrapper>
