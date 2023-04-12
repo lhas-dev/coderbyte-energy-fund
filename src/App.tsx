@@ -18,8 +18,14 @@ export type RootStackParamList = {
   Asset: undefined;
 };
 
+export type TabStackParamList = {
+  HomeTab: undefined;
+  TradeTab: undefined;
+  PortfolioTab: undefined;
+};
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<TabStackParamList>();
 
 const HomeTabIcon = ({focused}: {focused: boolean}) => {
   return <Home color={focused ? '#770FDF' : '#000'} />;

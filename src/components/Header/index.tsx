@@ -2,12 +2,12 @@ import React from 'react';
 import ArrowBack from '../../assets/icons/arrow-back.svg';
 import * as Styled from './styles';
 import {useNavigation} from '@react-navigation/native';
-import {ViewProps} from 'react-native';
+import {View, ViewProps} from 'react-native';
 
 interface HeaderProps extends ViewProps {
   back?: boolean;
 }
-export const Header = ({back = false, ...props}: HeaderProps) => {
+export const Header = ({back = false, children, ...props}: HeaderProps) => {
   const navigation = useNavigation();
 
   const handleBack = () => {
@@ -15,11 +15,15 @@ export const Header = ({back = false, ...props}: HeaderProps) => {
   };
   return (
     <Styled.Wrapper {...props}>
-      {back && (
-        <Styled.Button onPress={handleBack}>
-          <ArrowBack />
-        </Styled.Button>
-      )}
+      <Styled.Row>
+        {back && (
+          <Styled.Button onPress={handleBack}>
+            <ArrowBack />
+          </Styled.Button>
+        )}
+        {children}
+        <View />
+      </Styled.Row>
       <Styled.Divider />
     </Styled.Wrapper>
   );

@@ -8,8 +8,16 @@ import Chart2 from '../../assets/icons/chart-1.svg';
 import Chart3 from '../../assets/icons/chart-3.svg';
 import PriceUp from '../../assets/icons/price-up.svg';
 import PriceDown from '../../assets/icons/price-down.svg';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../App';
 
 export const Funds = () => {
+  const navigation =
+    useNavigation<
+      NativeStackScreenProps<RootStackParamList, 'Home'>['navigation']
+    >();
+
   const rows = [
     {
       id: 1,
@@ -36,13 +44,17 @@ export const Funds = () => {
       percentage: 0.01,
     },
   ];
+
+  const handleFund = () => {
+    navigation.navigate('Asset');
+  };
   return (
     <Styled.Wrapper>
       <Styled.Title>Funds</Styled.Title>
       <Styled.Cards horizontal>
         {rows.map(row => (
           <Styled.Row key={row.id}>
-            <Styled.Card>
+            <Styled.Card onPress={handleFund}>
               {row.icon}
               <Styled.CardTitle>{row.title}</Styled.CardTitle>
               {row.chart}

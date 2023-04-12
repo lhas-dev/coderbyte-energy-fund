@@ -1,10 +1,18 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {Header} from '../../components/Header';
+import * as Styled from './styles';
 
 export const AssetScreen = () => {
   return (
-    <SafeAreaView>
-      <Text>Asset</Text>
-    </SafeAreaView>
+    <Styled.Wrapper>
+      <Styled.ScrollArea>
+        <Header back>
+          <Styled.AssetDetails>
+            <Styled.AssetTitle>Wind Fund</Styled.AssetTitle>
+            <Styled.AssetTicker>WFND</Styled.AssetTicker>
+          </Styled.AssetDetails>
+        </Header>
+      </Styled.ScrollArea>
+    </Styled.Wrapper>
   );
 };

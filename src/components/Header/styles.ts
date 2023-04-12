@@ -3,6 +3,13 @@ import styled from 'styled-components/native';
 export const Wrapper = styled.View`
   width: 100%;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+`;
+export const Row = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const Button = styled.TouchableOpacity`
