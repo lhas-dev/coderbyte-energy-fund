@@ -5,6 +5,6 @@ export const Wrapper = styled.SafeAreaView`
   flex: 1;
 `;
 
-export const Form = styled.View`
+export const Form = styled.ScrollView`
   padding: 20px;
 `;
