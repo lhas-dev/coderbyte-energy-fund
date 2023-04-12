@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 import * as Styled from './styles';
+import * as Field from '../../components/Field';
 import Eye from '../../assets/icons/eye.svg';
 import {useNavigation} from '@react-navigation/native';
+import {PrimaryButton} from '../../components/PrimaryButton';
+import * as SecondaryButton from '../../components/SecondaryButton';
+import {Header} from '../../components/Header';
+import PageTitle from '../../components/PageTitle';
 
 export const LoginScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,40 +16,44 @@ export const LoginScreen = () => {
     navigation.navigate('SignUp');
   };
 
+  const handleSubmit = () => {
+    navigation.navigate('Home');
+  };
+
   return (
     <Styled.Wrapper>
-      <Styled.Divider />
-      <Styled.Title>Login</Styled.Title>
+      <Header />
+      <PageTitle>Login</PageTitle>
       <Styled.Form>
-        <Styled.Field>
-          <Styled.FieldLabel>E-mail</Styled.FieldLabel>
-          <Styled.FieldInput
+        <Field.Block>
+          <Field.Label>E-mail</Field.Label>
+          <Field.Input
             keyboardType="email-address"
             autoCapitalize="none"
             placeholder="Put your best e-mail here"
           />
-        </Styled.Field>
-        <Styled.Field>
-          <Styled.FieldLabel>Password</Styled.FieldLabel>
-          <Styled.FieldInput
+        </Field.Block>
+        <Field.Block>
+          <Field.Label>Password</Field.Label>
+          <Field.Input
             secureTextEntry={!showPassword}
             autoCapitalize="none"
             placeholder="Minimum 8 characters"
           />
-          <Styled.FieldIcon onPress={() => setShowPassword(!showPassword)}>
+          <Field.Icon onPress={() => setShowPassword(!showPassword)}>
             <Eye />
-          </Styled.FieldIcon>
-        </Styled.Field>
-        <Styled.Button>
-          <Styled.ButtonLabel>Login</Styled.ButtonLabel>
-        </Styled.Button>
-        <Styled.Helper onPress={handleSignUp}>
-          <Styled.HelperText>
+          </Field.Icon>
+        </Field.Block>
+        <PrimaryButton label="Login" onPress={handleSubmit} />
+        <SecondaryButton.Block onPress={handleSignUp}>
+          <SecondaryButton.Text>
             Don't have an account?{' '}
-            <Styled.HelperTextUnderline>Sign up</Styled.HelperTextUnderline>{' '}
+            <SecondaryButton.TextUnderline>
+              Sign up
+            </SecondaryButton.TextUnderline>{' '}
             here
-          </Styled.HelperText>
-        </Styled.Helper>
+          </SecondaryButton.Text>
+        </SecondaryButton.Block>
       </Styled.Form>
     </Styled.Wrapper>
   );
