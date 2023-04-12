@@ -5,10 +5,17 @@ export const Block = styled.View`
   margin-top: 10px;
   margin-bottom: 10px;
 `;
+
 export const Label = styled.Text`
   font-size: 11px;
   line-height: 14px;
   color: #a0a0a0;
+`;
+
+export const Error = styled.Text`
+  font-size: 11px;
+  line-height: 14px;
+  color: red;
 `;
 
 export const Input = styled.TextInput`
