@@ -7,6 +7,11 @@ import {PrimaryButton} from '../../components/PrimaryButton';
 import * as SecondaryButton from '../../components/SecondaryButton';
 import {Header} from '../../components/Header';
 import PageTitle from '../../components/PageTitle';
+import {
+  Checkbox,
+  CheckboxLabel,
+  CheckboxLabelHighlight,
+} from '../../components/Checkbox';
 
 export const SignUpScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -52,6 +57,16 @@ export const SignUpScreen = () => {
             <Eye />
           </Field.Icon>
         </Field.Block>
+        <Checkbox
+          label={
+            <CheckboxLabel>
+              I am over 18 years of age and I have read and agree to the{' '}
+              <CheckboxLabelHighlight>Terms of Service</CheckboxLabelHighlight>{' '}
+              and{' '}
+              <CheckboxLabelHighlight>Privacy Policy</CheckboxLabelHighlight>.
+            </CheckboxLabel>
+          }
+        />
         <PrimaryButton label="Create account" onPress={handleSubmit} />
         <SecondaryButton.Block onPress={handleLogin}>
           <SecondaryButton.Text>
