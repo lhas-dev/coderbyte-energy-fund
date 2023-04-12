@@ -8,3 +8,7 @@ export const Wrapper = styled.SafeAreaView`
 export const Form = styled.View`
   padding: 20px;
 `;
+
+export const HeaderPadding = styled.View`
+  padding-top: 50px;
+`;

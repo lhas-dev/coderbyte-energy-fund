@@ -6,5 +6,4 @@ export default styled.Text`
   line-height: 22px;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 34px;
 `;

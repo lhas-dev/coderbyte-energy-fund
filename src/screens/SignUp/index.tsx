@@ -22,7 +22,7 @@ export const SignUpScreen = () => {
 
   return (
     <Styled.Wrapper>
-      <Header />
+      <Header back />
       <PageTitle>Create your account</PageTitle>
       <Styled.Form>
         <Field.Block>
@@ -52,7 +52,7 @@ export const SignUpScreen = () => {
             <Eye />
           </Field.Icon>
         </Field.Block>
-        <PrimaryButton label="Login" onPress={handleSubmit} />
+        <PrimaryButton label="Create account" onPress={handleSubmit} />
         <SecondaryButton.Block onPress={handleLogin}>
           <SecondaryButton.Text>
             Already have an account?{' '}

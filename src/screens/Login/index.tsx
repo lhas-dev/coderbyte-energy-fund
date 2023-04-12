@@ -22,7 +22,9 @@ export const LoginScreen = () => {
 
   return (
     <Styled.Wrapper>
-      <Header />
+      <Styled.HeaderPadding>
+        <Header />
+      </Styled.HeaderPadding>
       <PageTitle>Login</PageTitle>
       <Styled.Form>
         <Field.Block>
