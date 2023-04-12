@@ -5,6 +5,7 @@ import Alert from '../../assets/icons/alert.svg';
 import CaretDown from '../../assets/icons/caret-down.svg';
 import {Portfolio} from '../../components/Portfolio';
 import {Funds} from '../../components/Funds';
+import {LearnMore} from '../../components/LearnMore';
 
 export const HomeScreen = () => {
   return (
@@ -24,6 +25,7 @@ export const HomeScreen = () => {
         <Portfolio />
         <Styled.Divider />
         <Funds />
+        <LearnMore />
       </Styled.ScrollArea>
     </Styled.Wrapper>
   );
