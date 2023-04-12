@@ -4,18 +4,23 @@ import * as Styled from './styles';
 interface CheckboxProps {
   label: ReactNode;
   checked?: boolean;
+  error?: string;
   onChecked: () => void;
 }
 export const Checkbox = ({
   label,
   checked = false,
+  error = '',
   onChecked,
 }: CheckboxProps) => {
   return (
-    <Styled.Wrapper onPress={onChecked}>
-      {!checked ? <Styled.Square /> : <Styled.SquareFilled />}
-      {label}
-    </Styled.Wrapper>
+    <>
+      <Styled.Wrapper onPress={onChecked}>
+        {!checked ? <Styled.Square /> : <Styled.SquareFilled />}
+        {label}
+      </Styled.Wrapper>
+      {!!error && <Styled.Error>{error}</Styled.Error>}
+    </>
   );
 };
 

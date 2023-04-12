@@ -28,6 +28,7 @@ export const LoginScreen = ({navigation}: LoginScreenProps) => {
     },
   });
   const [showPassword, setShowPassword] = useState(false);
+
   const onSubmit = (data: LoginFormData) => {
     console.log('Login data', data);
     navigation.navigate('Home');

@@ -33,3 +33,8 @@ export const CheckboxLabel = styled.Text`
 export const CheckboxLabelHighlight = styled.Text`
   color: #000000;
 `;
+
+export const Error = styled.Text`
+  color: red;
+  font-size: 11px;
+`;
