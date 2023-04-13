@@ -47,3 +47,24 @@ export const LowestPrice = styled.Text`
   margin-top: 10px;
   margin-bottom: 10px;
 `;
+
+export const Buy = styled.View`
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+`;
+
+export const Warning = styled.View`
+  margin-left: 20px;
+  margin-right: 20px;
+  background: #f4f4f4;
+  border-radius: 4px;
+  overflow: hidden;
+`;
+
+export const WarningText = styled.Text`
+  font-weight: 400;
+  font-size: 12px;
+  color: #a0a0a0;
+  padding: 10px;
+`;

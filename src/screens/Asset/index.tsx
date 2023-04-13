@@ -6,6 +6,7 @@ import {AssetValue} from '../../components/AssetValue';
 import {Periods} from '../../components/Periods';
 import {InfoStats} from '../../components/InfoStats';
 import {FundBreakdown} from '../../components/FundBreakdown';
+import {PrimaryButton} from '../../components/PrimaryButton';
 
 export const AssetScreen = () => {
   return (
@@ -24,6 +25,19 @@ export const AssetScreen = () => {
         <Periods />
         <InfoStats />
         <FundBreakdown />
+        <Styled.Warning>
+          <Styled.WarningText>
+            Please note that prices are for reference only and may vary at the
+            time of excecuting a buy or sell order.
+          </Styled.WarningText>
+          <Styled.WarningText>
+            The information provided is not investment advice, and should not be
+            used as a recommendation to buy or sell assets.
+          </Styled.WarningText>
+        </Styled.Warning>
+        <Styled.Buy>
+          <PrimaryButton label="Buy" onPress={() => {}} />
+        </Styled.Buy>
       </Styled.ScrollArea>
     </Styled.Wrapper>
   );
