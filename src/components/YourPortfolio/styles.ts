@@ -1,12 +1,13 @@
 import styled from 'styled-components/native';
 
-export const Wrapper = styled.View``;
+export const Wrapper = styled.View`
+  padding: 20px;
+`;
 export const Buttons = styled.View`
   display: flex;
   flex-direction: row;
   gap: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-top: 20px;
   padding-bottom: 20px;
 `;
 export const SellButton = styled.TouchableOpacity`
@@ -41,7 +42,6 @@ export const RetireCreditsButtonText = styled.Text`
 `;
 export const Credits = styled.View`
   display: flex;
-  padding: 20px;
 `;
 export const CreditsRow = styled.View`
   display: flex;
@@ -75,9 +75,16 @@ export const CreditsLastPurchase = styled.Text`
 `;
 
 export const PreviouslyRetired = styled.Text`
-  padding-left: 20px;
   padding-bottom: 40px;
   color: #a0a0a0;
   font-weight: 400;
   font-size: 11px;
+`;
+
+export const Title = styled.Text`
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 20px;
+  width: 100%;
 `;

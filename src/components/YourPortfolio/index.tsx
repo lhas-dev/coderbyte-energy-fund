@@ -1,10 +1,14 @@
 import React from 'react';
 import * as Styled from './styles';
 import PriceUp from '../../assets/icons/price-up.svg';
+import Portfolio from '../../assets/icons/portfolio.svg';
 
 export const YourPortfolio = () => {
   return (
     <Styled.Wrapper>
+      <Styled.Title>
+        <Portfolio color="#000" /> Your Portfolio
+      </Styled.Title>
       <Styled.Credits>
         <Styled.CreditsRow>
           <Styled.CreditsRowTotal>18 credits</Styled.CreditsRowTotal>
