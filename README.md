@@ -1,26 +1,25 @@
-Create a React Native App, which needs to work on Adnroid and IOS, using Redux and following the example layout. All data and information can be mocked. No Backend or Database required.
+# EneryFund
 
+This is the Energy Fund for CoderByte challenge.
 
+## Install instructions
 
-Login
+You just need to clone this app, and them install all dependencies:
 
- - Login form, redirecting to the home screen
+```bash
+yarn install
+npx pod-install
+```
 
-Sign up
+Now you can run the project:
 
- - Sign up form, show success screen when registering, need to agree with terms and conditions to enable submission button and no need to link terms and conditions to any screen 
+```bash
+yarn android # to run in Android simulator, or:
+yarn ios # to run in iOS simulator
+```
 
- - After registration, show success screen and return to login
+## Layout
 
-Home
-
- - Present at least 3 different types of assets/funds, with mock graphics and values
-
- - Bottom menu with 3 options - (Home, Trade and Portfolio) - Trade and Portfolio can lead to a blank page containing a title and lorem ipsum text
-
-Asset details
-
- - Screen to present details of the selected asset/fund. The layout is an illustration of the information that should appear. Use your creativity and you can use images of your choice to compose the details
+You can check the Layout for the app here:
 
 https://www.figma.com/file/2bM4PxB3F33biwjvIbcncd/React-Native-Challenge-(Copy)?t=LZFLo1wPUg3mys94-1
-

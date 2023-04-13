@@ -10,6 +10,8 @@ import {AssetScreen} from './screens/Asset';
 import Home from './assets/icons/home.svg';
 import Trade from './assets/icons/trade.svg';
 import Portfolio from './assets/icons/portfolio.svg';
+import {store} from './store';
+import {Provider} from 'react-redux';
 
 export type RootStackParamList = {
   Login: undefined;
@@ -78,16 +80,18 @@ function HomeTab() {
 }
 function App(): JSX.Element {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Login"
-        screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
-        <Stack.Screen name="Home" component={HomeTab} />
-        <Stack.Screen name="Asset" component={AssetScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Login"
+          screenOptions={{headerShown: false}}>
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="SignUp" component={SignUpScreen} />
+          <Stack.Screen name="Home" component={HomeTab} />
+          <Stack.Screen name="Asset" component={AssetScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 

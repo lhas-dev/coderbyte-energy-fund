@@ -7,8 +7,13 @@ import {Portfolio} from '../../components/Portfolio';
 import {Funds} from '../../components/Funds';
 import {LearnMore} from '../../components/LearnMore';
 import {FAQ} from '../../components/FAQ';
+import {RootState} from '../../store';
+import {useSelector} from 'react-redux';
 
 export const HomeScreen = () => {
+  const {balance, portfolio, variation} = useSelector(
+    (state: RootState) => state.user,
+  );
   return (
     <Styled.Wrapper>
       <Styled.ScrollArea>
@@ -17,7 +22,7 @@ export const HomeScreen = () => {
             <Person />
           </Styled.ProfileButton>
           <Styled.HeaderText>
-            Account: $1,457.23 <CaretDown />
+            Account: ${balance} <CaretDown />
           </Styled.HeaderText>
           <Styled.AlertButton>
             <Alert />
