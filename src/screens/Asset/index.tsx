@@ -3,6 +3,7 @@ import {Header} from '../../components/Header';
 import * as Styled from './styles';
 import BigChart from '../../assets/icons/big-chart.svg';
 import {AssetValue} from '../../components/AssetValue';
+import {Periods} from '../../components/Periods';
 
 export const AssetScreen = () => {
   return (
@@ -18,6 +19,7 @@ export const AssetScreen = () => {
         <Styled.BiggestPrice>$19.02</Styled.BiggestPrice>
         <BigChart />
         <Styled.LowestPrice>$17.66</Styled.LowestPrice>
+        <Periods />
       </Styled.ScrollArea>
     </Styled.Wrapper>
   );
