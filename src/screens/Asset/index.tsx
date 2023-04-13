@@ -7,6 +7,7 @@ import {Periods} from '../../components/Periods';
 import {InfoStats} from '../../components/InfoStats';
 import {FundBreakdown} from '../../components/FundBreakdown';
 import {PrimaryButton} from '../../components/PrimaryButton';
+import {YourPortfolio} from '../../components/YourPortfolio';
 
 export const AssetScreen = () => {
   return (
@@ -25,6 +26,7 @@ export const AssetScreen = () => {
         <Periods />
         <InfoStats />
         <FundBreakdown />
+        <YourPortfolio />
         <Styled.Warning>
           <Styled.WarningText>
             Please note that prices are for reference only and may vary at the
