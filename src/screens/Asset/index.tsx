@@ -5,6 +5,7 @@ import BigChart from '../../assets/icons/big-chart.svg';
 import {AssetValue} from '../../components/AssetValue';
 import {Periods} from '../../components/Periods';
 import {InfoStats} from '../../components/InfoStats';
+import {FundBreakdown} from '../../components/FundBreakdown';
 
 export const AssetScreen = () => {
   return (
@@ -22,6 +23,7 @@ export const AssetScreen = () => {
         <Styled.LowestPrice>$17.66</Styled.LowestPrice>
         <Periods />
         <InfoStats />
+        <FundBreakdown />
       </Styled.ScrollArea>
     </Styled.Wrapper>
   );
