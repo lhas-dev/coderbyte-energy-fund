@@ -8,21 +8,25 @@ import {InfoStats} from '../../components/InfoStats';
 import {FundBreakdown} from '../../components/FundBreakdown';
 import {PrimaryButton} from '../../components/PrimaryButton';
 import {YourPortfolio} from '../../components/YourPortfolio';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../App';
 
-export const AssetScreen = () => {
+type AssetScreenProps = NativeStackScreenProps<RootStackParamList, 'Asset'>;
+export const AssetScreen = (props: AssetScreenProps) => {
+  const {title, ticker, price, variation, biggest, lowest} = props.route.params;
   return (
     <Styled.Wrapper>
       <Styled.ScrollArea>
         <Header back>
           <Styled.AssetDetails>
-            <Styled.AssetTitle>Wind Fund</Styled.AssetTitle>
-            <Styled.AssetTicker>WFND</Styled.AssetTicker>
+            <Styled.AssetTitle>{title}</Styled.AssetTitle>
+            <Styled.AssetTicker>{ticker}</Styled.AssetTicker>
           </Styled.AssetDetails>
         </Header>
-        <AssetValue />
-        <Styled.BiggestPrice>$19.02</Styled.BiggestPrice>
+        <AssetValue value={price} year={2023} variation={variation} />
+        <Styled.BiggestPrice>${biggest}</Styled.BiggestPrice>
         <BigChart />
-        <Styled.LowestPrice>$17.66</Styled.LowestPrice>
+        <Styled.LowestPrice>${lowest}</Styled.LowestPrice>
         <Periods />
         <InfoStats />
         <FundBreakdown />

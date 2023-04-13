@@ -13,6 +13,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../App';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../store';
+import {FundSlice} from '../../store/slices/funds';
 
 export const Funds = () => {
   const icons: {[key: string]: ReactNode} = {
@@ -26,8 +27,8 @@ export const Funds = () => {
       NativeStackScreenProps<RootStackParamList, 'Home'>['navigation']
     >();
 
-  const handleFund = () => {
-    navigation.navigate('Asset');
+  const handleFund = (fund: FundSlice) => {
+    navigation.navigate('Asset', fund);
   };
 
   const getChart = (variation: number) => {
@@ -45,7 +46,7 @@ export const Funds = () => {
       <Styled.Cards horizontal>
         {rows.map(row => (
           <Styled.Row key={row.title}>
-            <Styled.Card onPress={handleFund}>
+            <Styled.Card onPress={() => handleFund(row)}>
               {icons[row.type]}
               <Styled.CardTitle>{row.title}</Styled.CardTitle>
               {getChart(row.variation)}

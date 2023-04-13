@@ -12,12 +12,13 @@ import Trade from './assets/icons/trade.svg';
 import Portfolio from './assets/icons/portfolio.svg';
 import {store} from './store';
 import {Provider} from 'react-redux';
+import {FundSlice} from './store/slices/funds';
 
 export type RootStackParamList = {
   Login: undefined;
   SignUp: undefined;
   Home: undefined;
-  Asset: undefined;
+  Asset: FundSlice;
 };
 
 export type TabStackParamList = {
