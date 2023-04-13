@@ -33,7 +33,7 @@ export const InfoStats = () => {
     <Styled.Wrapper>
       <Styled.Title>Info & Stats</Styled.Title>
       {rows.map(row => (
-        <Styled.Row id={row.label}>
+        <Styled.Row key={row.label} id={row.label}>
           <Styled.RowLabel>
             {row.label} <Info />
           </Styled.RowLabel>
