@@ -11,9 +11,7 @@ import {RootState} from '../../store';
 import {useSelector} from 'react-redux';
 
 export const HomeScreen = () => {
-  const {balance, portfolio, variation} = useSelector(
-    (state: RootState) => state.user,
-  );
+  const {balance} = useSelector((state: RootState) => state.user);
   return (
     <Styled.Wrapper>
       <Styled.ScrollArea>
